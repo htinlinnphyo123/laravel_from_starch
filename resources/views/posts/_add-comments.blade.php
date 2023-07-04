@@ -8,12 +8,7 @@
             <div>
                 <h3 class="mb-4">Want to participate?</h3>
                 <div class="mt-6">
-                    <textarea name="body" cols="40" rows="5" 
-                        class="p-3 w-full text-sm focus:outline-none focus:ring"
-                        placeholder="Quick, thing of something to say!"></textarea>
-                    @error('body')
-                        <span class="block text-red-300 text-xs">{{ $message }}</span>                                        
-                    @enderror
+                    <x-form.textarea name="body">{{ old('body') ?? '' }}</x-form.textarea>
                 </div>
                 <div class="flex flex-end">
                     <button class="bg-blue-500 mt-2 p-2 rounded-md text-white">Post</button>
